@@ -1,0 +1,13 @@
+# macOS system files
+.DS_Store
+
+# Directories
+Obsidian Vaults/
+cursor/
+docs/
+dotfiles-cursor/
+email/
+lmstudio/
+n/
+www/
+xxs/

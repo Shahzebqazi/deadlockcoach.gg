@@ -1,0 +1,91 @@
+# Cursor Configuration Sync - Configuration File
+
+# GitHub Repository Settings
+github:
+  repo: "yourusername/cursor-config-sync"
+  branch: "main"
+  token_env: "GITHUB_TOKEN"  # Environment variable for GitHub token
+
+# Cursor Configuration Paths
+cursor:
+  # Main configuration directory (macOS)
+  config_dir: "~/Library/Application Support/Cursor/User"
+  # Alternative paths for other OS
+  config_dirs:
+    - "~/Library/Application Support/Cursor/User"  # macOS
+    - "~/.config/Cursor/User"                     # Linux
+    - "%APPDATA%/Cursor/User"                     # Windows
+
+# What to capture and sync
+capture:
+  # Core configuration files
+  files:
+    - "settings.json"
+    - "keybindings.json"
+    - "snippets/**"
+  
+  # Profile-specific files
+  profiles:
+    - "profiles/*/settings.json"
+    - "profiles/*/extensions.json"
+    - "profiles/*/snippets/**"
+  
+  # Extensions (captured as list, not files)
+  extensions: true
+  
+  # Workspace storage (project-specific settings)
+  workspace_storage: true
+  
+  # Global storage
+  global_storage: true
+
+# What to ignore (never capture)
+ignore:
+  - "History/**"
+  - "workspaceStorage/*/workspace.json"  # Too many, capture selectively
+  - "*.log"
+  - "*.tmp"
+  - ".DS_Store"
+
+# Backup settings
+backup:
+  # Keep this many backups locally
+  local_backups: 5
+  
+  # Backup directory
+  backup_dir: "~/.cursor-config-backups"
+  
+  # Auto-backup before capture
+  auto_backup: true
+
+# Sync settings
+sync:
+  # Auto-sync frequency (never, hourly, daily, startup)
+  frequency: "startup"
+  
+  # Sync on file changes
+  watch_changes: true
+  
+  # Conflict resolution strategy (ask, local, remote, merge)
+  conflict_strategy: "ask"
+  
+  # Maximum sync attempts
+  max_retries: 3
+
+# Logging
+logging:
+  level: "info"  # debug, info, warn, error
+  file: "~/.cursor-config-sync.log"
+  max_size: "10MB"
+  max_files: 5
+
+# Notifications
+notifications:
+  # Show notifications on completion
+  show_notifications: true
+  
+  # Sound notifications
+  sound: false
+  
+  # Desktop notifications
+  desktop: true
