@@ -1,0 +1,26 @@
+{
+    "folders": [
+        {
+            "name": "DeadlockCoach.gg (Local)",
+            "path": "."
+        },
+        {
+            "name": "Charon Server (/opt/deadlockcoach.gg/)",
+            "uri": "vscode-remote://ssh-remote+charon/opt/deadlockcoach.gg"
+        }
+    ],
+    "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "remote.SSH.remotePlatform": {
+            "charon": "linux"
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-vscode-remote.remote-ssh",
+            "ms-vscode-remote.remote-containers",
+            "bradlc.vscode-tailwindcss",
+            "esbenp.prettier-vscode"
+        ]
+    }
+}
