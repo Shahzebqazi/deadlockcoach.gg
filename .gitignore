@@ -49,6 +49,7 @@ next-env.d.ts
 *.swp
 *.swo
 *~
+*.code-workspace
 
 # OS
 Thumbs.db
